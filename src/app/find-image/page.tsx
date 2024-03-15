@@ -1,6 +1,6 @@
 import ImageCardContainer from '@/components/ImageCardContainer'
 
-const AiGenerateImagePage = () => {
+const GenerateImagePage = () => {
   return <ImageCardContainer />
 }
-export default AiGenerateImagePage
+export default GenerateImagePage

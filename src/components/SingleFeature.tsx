@@ -11,7 +11,7 @@ const SingleFeature = ({ title, description, cta, link, path }: Feature) => {
             stroke='currentColor'
             strokeLinecap='round'
             strokeLinejoin='round'
-            stroke-width='2'
+            strokeWidth='2'
             className='w-8 h-8'
             viewBox='0 0 24 24'
           >
@@ -33,7 +33,7 @@ const SingleFeature = ({ title, description, cta, link, path }: Feature) => {
               stroke='currentColor'
               strokeLinecap='round'
               strokeLinejoin='round'
-              stroke-width='2'
+              strokeWidth='2'
               className='w-4 h-4 ml-2'
               viewBox='0 0 24 24'
             >

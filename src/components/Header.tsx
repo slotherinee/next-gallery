@@ -11,11 +11,11 @@ const navigationLinks = [
   },
   {
     title: 'Image gallery',
-    href: '/generate-image',
+    href: '/find-image',
   },
   {
     title: 'AI image generator',
-    href: '/ai-generate-image',
+    href: '/generate-image',
   },
   {
     title: 'About us',
@@ -56,7 +56,13 @@ const Header = () => {
           ))}
         </nav>
         <button className='inline-flex items-center border-0 py-1 px-3 hover:bg-gray-100 rounded text-base mt-4 md:mt-0'>
-          {isLoggedIn ? <FaRegUserCircle /> : 'Login'}
+          {isLoggedIn ? (
+            <Link href='/profile'>
+              <FaRegUserCircle />
+            </Link>
+          ) : (
+            'Login'
+          )}
         </button>
       </div>
     </header>
