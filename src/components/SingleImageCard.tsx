@@ -8,7 +8,7 @@ const SingleImageCard = () => {
         alt='Image'
         className='w-full rounded-lg object-cover'
       />
-      <div className='absolute inset-0 flex items-end justify-center opacity-0 transition-opacity delay-300 duration-300 hover:opacity-100'>
+      <div className='absolute inset-0 flex items-end justify-center opacity-0 transition-opacity delay-500 duration-300 hover:opacity-100'>
         <div className='bg-black bg-opacity-75 p-4 rounded-lg w-full flex justify-between flex-row-reverse items-center'>
           <div className='mt-3'>
             <button className='mb-2 mr-1 px-4 py-2 bg-white text-black rounded-lg'>
@@ -26,7 +26,7 @@ const SingleImageCard = () => {
             />
             <div className='ml-2 text-white'>
               <p className='font-bold'>Author Name</p>
-              <p className='text-sm'>Author Surname</p>
+              <p className='text-sm underline cursor-pointer'>Author Link</p>
             </div>
             div
           </div>

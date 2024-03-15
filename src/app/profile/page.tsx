@@ -1,4 +1,10 @@
-const ProfilePage = () => {
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
+
+const ProfilePage = async () => {
+  const { getUser } = getKindeServerSession()
+  const user = await getUser()
+
   return (
     <div className='container min-h-screen mx-auto my-5 p-5'>
       <div className='md:flex no-wrap md:-mx-2 '>
@@ -6,16 +12,15 @@ const ProfilePage = () => {
         <div className='w-full md:w-3/12 md:mx-2'>
           <div className='bg-white p-3 '>
             <h1 className='text-gray-900 font-bold text-xl leading-8 my-1'>
-              Jane Doe
+              {user?.given_name} {user?.family_name}
             </h1>
             <h3 className='text-gray-600 font-lg text-semibold leading-6'>
-              Owner at Her Company Inc.
+              {user?.email}
             </h3>
-            <p className='text-sm text-gray-500 hover:text-gray-600 leading-6'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur
-              non deserunt
-            </p>
+
+            <LogoutLink className='inline-block mt-5 underline hover:no-underline'>
+              Log out
+            </LogoutLink>
           </div>
         </div>
         {/* <!-- Right Side --> */}

@@ -1,4 +1,6 @@
 'use client'
+import { useKindeBrowserClient } from '@kinde-oss/kinde-auth-nextjs'
+import { LoginLink } from '@kinde-oss/kinde-auth-nextjs/components'
 import Link from 'next/link'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { usePathname } from 'next/navigation'
@@ -24,8 +26,8 @@ const navigationLinks = [
 ]
 
 const Header = () => {
+  const { user } = useKindeBrowserClient()
   const pathname = usePathname()
-  const isLoggedIn = true
 
   return (
     <header className='text-gray-600 body-font'>
@@ -56,12 +58,25 @@ const Header = () => {
           ))}
         </nav>
         <button className='inline-flex items-center border-0 py-1 px-3 hover:bg-gray-100 rounded text-base mt-4 md:mt-0'>
-          {isLoggedIn ? (
+          {user ? (
             <Link href='/profile'>
-              <FaRegUserCircle />
+              {user.picture ? (
+                <Image
+                  className='rounded-xl'
+                  src={user.picture}
+                  width={20}
+                  height={20}
+                  sizes='100vw'
+                  alt='user picture'
+                />
+              ) : (
+                <FaRegUserCircle />
+              )}
             </Link>
           ) : (
-            'Login'
+            <LoginLink postLoginRedirectURL='/profile'>
+              Login | Sign up
+            </LoginLink>
           )}
         </button>
       </div>
