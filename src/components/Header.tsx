@@ -12,7 +12,7 @@ const navigationLinks = [
     href: '/',
   },
   {
-    title: 'Image gallery',
+    title: 'Gallery',
     href: '/find-image',
   },
   {

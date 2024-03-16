@@ -7,9 +7,10 @@ export type Feature = {
   path: string
 }
 
-export type ButtonProps = {
-  children: React.ReactNode
-  className: string
+export type InputWithButton = {
+  query: string
+  setQuery: (query: string) => void
+  setPhotos: (photos: SingleImageCardProps[]) => void
 }
 
 export type SingleImageCardProps = {

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Button } from './ui/button'
 
 const Hero = () => {
   return (
@@ -16,16 +17,18 @@ const Hero = () => {
             Say goodbye to hours of searching and let our intelligent algorithms
             find the perfect images for you.
           </p>
-          <div className='flex justify-center'>
+          <div className='flex gap-4 justify-center'>
             <Link href='find-image'>
-              <button className='inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg'>
+              {/* <button className='inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg'>
                 Find image
-              </button>
+              </button> */}
+              <Button>Find image</Button>
             </Link>
             <Link href='generate-image'>
-              <button className='ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg'>
+              {/* <button className='ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg'>
                 Generate image by AI
-              </button>
+              </button> */}
+              <Button variant='outline'>Generate image by AI</Button>
             </Link>
           </div>
         </div>
