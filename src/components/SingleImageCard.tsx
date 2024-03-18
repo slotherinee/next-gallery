@@ -36,13 +36,13 @@ const SingleImageCard = (props: SingleImageCardProps) => {
               className='w-8 h-8 rounded-full'
             />
             <div className='ml-2 text-white'>
-              <p className='font-bold underline hover:no-underline'>
+              <p className='font-bold underline cursor-pointer hover:no-underline'>
                 <Link target='_blank' href={props.user.links.html}>
                   {props.user.name}
                 </Link>
               </p>
 
-              <p className='text-sm underline cursor-pointer'>
+              <p className='text-sm underline cursor-pointer hover:no-underline'>
                 <Link target='_blank' href={props.links.html}>
                   Link to picture
                 </Link>
